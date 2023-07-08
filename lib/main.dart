@@ -45,8 +45,9 @@ class _DicePageState extends State<DicePage> {
                   onPressed: () {
                     setState(() {
                       leftDiceNumber = Random().nextInt(6)+1;
+                      rightDiceNumber = Random().nextInt(6)+1;
                     });
-                    print("Left Button Pressed $leftDiceNumber");
+                    // print("Left Button Pressed $leftDiceNumber");
               },
                   child: Image.asset('images/dice$leftDiceNumber.png')),
             ),
@@ -57,9 +58,10 @@ class _DicePageState extends State<DicePage> {
               child: TextButton(
                   onPressed: () {
                     setState(() {
+                      leftDiceNumber = Random().nextInt(6)+1;
                       rightDiceNumber = Random().nextInt(6)+1;
                     });
-                    print("Right Button Pressed $rightDiceNumber");
+                    // print("Right Button Pressed $rightDiceNumber");
                   },
                   child: Image.asset('images/dice$rightDiceNumber.png')),
             ),
